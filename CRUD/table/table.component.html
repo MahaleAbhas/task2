@@ -1,0 +1,63 @@
+<section>
+    <!-- Intro -->
+    
+    <div id="intro" class="bg-image vh-100" style="
+          background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)), url('assets/6.jpg');
+          background-size: cover;
+        ">
+        
+      <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);">
+        
+      </div>
+      <div class="container">
+        <div class="row">
+            <table class="table table-dark tab">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First NAME</th>
+                    <th scope="col">Last NAME</th>
+                    <th scope="col">GENDER</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">PHONE NO</th>
+                    <th scope="col">PASSWORD</th>
+                    <th scope="col">Project Name</th>
+                    <th scope="col">ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                   <tr *ngFor="let s of students">
+                    <th scope="row">{{s.id}}</th>
+                    <td>{{s.fname}}</td>
+                    <td>{{s.lname}}</td>
+                    <td>{{s.gender}}</td>
+                    <td>{{s.email}}</td>
+                    <td>{{s.phoneno}}</td>
+                    <td>{{s.pwd}}</td>
+                    <td>{{s.project_name}}</td>
+                    
+                    <td>
+                        <button class="btn btn-primary" [routerLink]="['/update']" [state]="s">Edit</button> 
+                        
+                        <button class="btn btn-danger" (click)="deleteData(s.id)">Delete</button>
+                    </td>
+                  </tr> 
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+      
+    </div>
+    <!-- Intro -->
+    
+  </section>
+
+
+
+
+
+
+
+
+
